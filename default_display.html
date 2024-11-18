@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% block title %}
+<title> Patient records </title>
+{% endblock %}
+
+{% block body%}
+
+<h1>Clinic and Care <br><div class="company-motto">Your health is our utmost concern</div></h1>
+<br>
+<nav> 
+   <ul>   
+      <li><a href="{{url_for('Addpatient')}}" >Add patient</a> </li>
+      <li><a href="{{url_for('updatepage')}}">Update patient</a></li>
+      <li>
+         <p>Parent records</p>
+         <ul class="listdown">
+            <li><a href="{{url_for('records')}}">View all records</a></li>
+            <li><a href="{{url_for('ID')}}">view by ID</a></li>
+         
+         </ul>
+      </li>
+      <li><a href="{{url_for('deletepage')}}">Delete patient</a></li>
+   </ul>
+</nav>
+{% endblock %}

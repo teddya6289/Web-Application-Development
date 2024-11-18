@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>ID record</title> 
+
+{% endblock %}
+
+{% block body %}
+<h3><div class="homebutton"><a href="{{url_for('default_display')}}">home</a></div>Patient record with ID:{{patient_id}}</h3>
+<div class="patientrecord">
+    <table>
+        <tr>
+        <th>Patient ID</th>
+        <th>Disease</th>
+        <th>Fever</th>
+        <th>Cough</th>
+        <th>Fatigue</th>
+        <th>Difficulty Breathing</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Blood Pressure</th>
+        <th>Cholesterol Level</th>
+        <th>Outcome Variable</th>
+        </tr>
+        {% if patient %}
+                <tr>
+                    <td>{{patient.patient_id}}</td>
+                    <td>{{patient.Disease}}</td>
+                    <td>{{patient.Fever}}</td>
+                    <td>{{patient.Cough}}</td>
+                    <td>{{patient.Fatigue}}</td>
+                    <td>{{patient.Difficulty_Breath}}</td>
+                    <td>{{patient.Age}}</td>
+                    <td>{{patient.Gender}}</td>
+                    <td>{{patient.Blood_Pressure}}</td>
+                    <td>{{patient.Cholesterol_Level}}</td>
+                    <td>{{patient.Outcome_Variable}}</td>
+                </tr>
+        {% endif %}
+    </table>
+</div>
+
+{% endblock %}

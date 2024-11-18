@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Delete patient Record</title>{% endblock %}
+
+{% block body %} 
+<h3> <div class="homebutton"><a href="{{url_for('default_display')}}">home</a></div>Delete Patient Record</h3>
+<form   method= "POST" action="{{url_for('deletepage')}}">
+<div class="word">
+    <div class="form-con">
+    <div class="form-display">
+        <input type="text" id="patient_ID" name="patient_ID" placeholder="Enter Patient ID" required> 
+        <button type="submit">Delete</button>
+    </div>
+</div>
+</div>
+</form>
+{% endblock %}

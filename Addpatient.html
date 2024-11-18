@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}
+<title> Add Patient </title>
+{% endblock %}
+
+{% block body %}
+
+<h2><div class="homebutton"><a href="{{url_for('default_display')}}">home</a></div> Add Patient</h2>
+<form action="/patientAdd" method="POST">
+    <div class="form-container">
+    <div class="form-group">
+    <label for= "patient_ID">(Required)<br>Patient ID:</label>&nbsp;
+    <input type="text" id="patient_ID" name="patient_ID" required></div> <br>
+    
+    <div class="form-group">
+    <label for="Disease">Disease:</label> &nbsp;
+    <input type="text" id="Disease" name="Disease"></div> <br>
+    
+    <div class="form-group">
+    <label>Fever:</label>
+    <label for="Yes">Yes</label>
+    <input type="radio" id="Yes" name="Fever" value="Yes">
+    <label for="No">No</label> 
+    <input type="radio" id="No" name="Fever" value="No">
+    </div><br>
+    
+    <div class="form-group">
+    <label>Cough:</label>
+    <label for="Yes">Yes</label>
+    <input type="radio" id="Yes" name="Cough" value="Yes">
+    <label for="No">No</label>
+    <input type="radio" id="No" name="Cough" value="No">
+    </div> <br>
+    
+    <div class="form-group">
+    <label>Fatigue:</label>
+    <label for="Yes">Yes</label>
+    <input type="radio" id="Yes" name="Fatigue" value="Yes">
+    <label for="No">No</label>
+    <input type="radio" id="No" name="Fatigue" value="No">
+    </div> <br>
+    
+    <div class="form-group">
+    <label>Difficult Breath:</label>
+    <label for="Yes">Yes</label>
+    <input type="radio" id="Yes" name="Difficulty_Breath" value="Yes">
+    <label for="No">No</label>
+    <input type="radio" id="No" name="Difficulty_Breath" value="No">
+    </div> <br>
+    
+    <div class="form-group">
+    <label for="age">(Required)-Age:</label>
+    <input type="number" id="age" name="Age" required></div><br>
+    
+    <div class="form-group">
+    <label>Gender:</label>
+    <label for="Male">Male</label>
+    <input type="radio" id="Male" name="Gender" value="Male">
+    <label for="Female">Female</label>
+    <input type="radio" id="Female" name="Gender" value="Female"></div><br>
+
+    <div class="form-group">
+    <label for="blood_pressure">Blood Pressure:</label>
+    <select id="blood_pressure" name="Blood_Pressure">
+        <option value="">Select</option>
+        <option value="Normal">Normal</option>
+        <option value="High">High</option>
+        <option value="Low">Low</option>
+    </select></div><br>
+
+    <div class="form-group">
+    <label for="cholesterol_level">Chol Level:</label>
+    <select id="cholesterol_level" name="Cholesterol_Level" >
+        <option value=""> Select</option>
+        <option value="Normal">Normal</option>
+        <option value="High">High</option>
+        <option value="Low">Low</option>
+    </select></div><br>
+
+    <div class="form-group">
+    <label>Outcome Variable:</label>
+    <label for="positive_outcome">Positive</label>
+    <input type="radio" id="positive" name="Output_Variable" value="Positive">
+    <label for="negative_outcome">Negative</label>
+    <input type="radio" id="negative" name="Output_Variable" value="Negative"></div><br>
+    <div class="form-group">
+    <button type="submit" >Submit</button></div>
+</div>
+</form>
+
+{% endblock %}

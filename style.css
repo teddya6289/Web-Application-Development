@@ -1,0 +1,249 @@
+h1{
+    border:2px;
+    border-top: 5px;
+    color:black;
+    text-align: center;
+    padding:5px;
+    font-weight: bolder;
+font-size: xx-large;
+border-color: rgb(194, 146, 83);
+border-radius: 25%;
+border-style: ridge;
+font-style: italic;
+background-color: burlywood;}
+
+.company-motto {
+    font-size: medium;
+    font-style: italic;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    margin-top: 2px;}
+
+.image{image-rendering: auto;
+image-resolution: 1098;}
+
+a{
+color:black;
+font-style: italic;
+font-weight:bold;
+font-size: large;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-decoration: none;}
+
+body {
+    background-image: url('webbackgroud.jpg'); /* Use relative path */
+    background-attachment:fixed; /* Background stays fixed during scroll */
+    height: 100%; /* Full height */
+    background-blend-mode: lighten; /* Blend background color with image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Scale the image to fit the container */}
+
+.form-container{ 
+        display: inline-block;
+        background-color: white;
+        backface-visibility: hidden;
+        border: 2px;
+        border-style: groove;
+        width: max-content;}
+    
+    
+
+.form-group {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 2px;
+        gap: 10px;
+        margin-left: 5px;}
+
+
+.form-group label {
+        width: 50px;
+        margin-right:15px;
+        text-align: center;}
+    
+
+    
+.form-group input {
+        flex:0;
+        padding: 8px;
+        margin-right: 0px;}
+
+input[type="number"]{width:40px;
+    text-align: center;}
+    
+
+.form-group button{
+        font-weight: bold;
+        font-size: large;
+        font-style: italic;
+        color: green;}
+   
+form{text-align: center;}
+    
+
+h2 {
+    border:2px;
+    border-top: 15px;
+    color:black;
+    text-align: center;
+    padding:5px;
+    font-weight: bolder;
+font-size: xx-large;
+border-color: burlywood;
+border-radius: 50%;
+border-style: ridge;
+font-style: italic;}
+
+
+.form-con{ 
+    display:inline-block;
+    background-color: white;
+    border: 5px;
+    border-style: groove;
+    width: auto;
+    padding: 10px;}
+
+.form-display {
+        
+        margin-top: 5px;
+        margin-bottom: 2px;
+        width: auto;
+    text-align: justify;}
+
+.form-display label {
+            text-align: right;
+            margin-right: 10px;}
+
+.form-display input {
+        flex:0;
+        padding: 5px;
+        width: auto;}
+
+
+.form-display button{
+            font-weight: bold;
+            font-size: small;
+            font-style: italic;
+            color: green;}
+
+
+
+h3{
+    border:2px;
+    border-top: 5px;
+    color:black;
+    margin-top: 0px;
+    text-align: center;
+    padding:5px;
+    font-weight: bolder;
+font-size: xx-large;
+border-color: burlywood;
+border-radius: 50%;
+border-style: ridge;
+font-style: italic;}
+
+
+.form-display label {
+    color: black;}
+
+
+.homebutton{text-align: left;
+    text-indent: 100px;}
+
+
+
+p{text-align: center;
+font-size: larger;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-style: oblique;
+font-display:fallback;}
+
+
+.patientrecord {
+        border-collapse:collapse;
+        width: 100%; }
+    
+    
+.patientrecord th, .patientrecord td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;}
+
+
+.sumit button{font-weight: bold;
+color: red;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: large;
+font-style: italic;}
+
+
+.sumit button a{color: green;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-style: italic;}
+
+nav{background-color: antiquewhite;
+        display: inline-block;
+        border-style: inherit;
+        border-radius: 15px;
+        border-top: 0px;
+        margin-top: 0px; }
+
+
+
+        /* Basic styling for the nav */
+nav ul {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange items horizontally */}
+  
+  nav li{
+    position: relative; /* Needed for dropdown positioning */
+    margin: 0 15px; /* Spacing between items */}
+  
+  
+nav li p{
+    position: relative; /* Needed for dropdown positioning */
+    margin: 0 15px; /* Spacing between items */
+    font-weight: bold;} 
+
+ 
+  nav a:hover {
+    color: #007BFF; /* Change color on hover */}
+  
+  
+  
+    /* Styling for the nested list */
+  nav .listdown {
+    display: none; /* Hide the dropdown initially */
+    position: static; /* Position relative to parent <li> */
+    top: 100%; /* Position below the parent item */
+    left: 0;
+    background-color: #fff; /* Background color for the dropdown */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 10px 0; /* Add some padding */
+    list-style: none; /* Remove bullets */
+    z-index: 1000; /* Ensure it appears above other elements */
+    opacity: 0.5; /* Set initial opacity for fade effect */
+    box-shadow: 2px;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.5s ease;}
+  
+ 
+ 
+nav .listdown li {
+    margin: 0; /* Reset margin for dropdown items */}
+  
+nav .listdown a {
+    padding: 5px 15px; /* Add padding for dropdown items */
+    display: block; /* Make the links block-level for better clickability */}
+  
+ 
+ 
+    /* Show the dropdown when hovering over the parent <li> */
+  nav li:hover .listdown {
+    display: block;}

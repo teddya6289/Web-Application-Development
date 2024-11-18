@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>update record</title>{% endblock %}
+
+{% block body %}
+<div class="homebutton"><a href="{{url_for('updatepage')}}">Previous Page</a></div>
+<div>
+    <p> Proceed to update patient record with ID:{{Pid}}</p>
+</div><br>
+
+<form action="{{url_for('updatepatient', Pid=Pid)}}" method= "POST">
+<div class="form-con">
+<div class="form-display">
+    <input type="hidden" name="patient_ID" value ="{{ Pid }}">
+    <label for="disease">Disease</label>
+    <input type="text" id="disease"  name="Disease" value="{{patient.Disease}}">
+    <br>
+
+<div class="form-display">
+        <label>Fever:</label>
+        <label for="Yes">Yes</label>
+        <input type="radio" id="Yes" name="Fever" value="Yes" {% if patient.Fever == 'Yes' %}checked{% endif %}>
+        <label for="No">No</label> 
+        <input type="radio" id="No" name="Fever" value="No" {% if patient.Fever == 'No' %}checked{% endif %}>
+        </div><br>
+        
+        <div class="form-display">
+        <label>Cough:</label>
+        <label for="Yes">Yes</label>
+        <input type="radio" id="Yes" name="Cough" value="Yes" {% if patient.Cough == 'Yes' %}checked{% endif %}>
+        <label for="No">No</label>
+        <input type="radio" id="No" name="Cough" value="No" {% if patient.Cough == 'No' %}checked{% endif %}>
+        </div><br>
+        
+        <div class="form-display">
+        <label>Fatigue:</label>
+        <label for="Yes">Yes</label>
+        <input type="radio" id="Yes" name="Fatigue" value="Yes" {% if patient.Fatigue == 'Yes' %}checked{% endif %}>
+        <label for="No">No</label>
+        <input type="radio" id="No" name="Fatigue" value="No" {% if patient.Fatigue == 'No' %}checked{% endif %}>
+        </div><br>
+        
+        <div class="form-display">
+        <label>Difficult Breath:</label>
+        <label for="Yes">Yes</label>
+        <input type="radio" id="Yes" name="Difficulty_Breath" value="Yes" {% if patient.Difficulty_Breath == 'Yes' %}checked{% endif %}>
+        <label for="No">No</label>
+        <input type="radio" id="No" name="Difficulty_Breath" value="No" {% if patient.Difficulty_Breath == 'No' %}checked{% endif %}>
+        </div><br>
+        
+        <div class="form-display">
+        <label for="age">(Required)-Age:</label>
+        <input type="number" id="age" name="Age" value="{{patient.Age}}"></div><br>
+        
+        <div class="form-display">
+        <label>Gender:</label>
+        <label for="Male">Male</label>
+        <input type="radio" id="Male" name="Gender" value="Male" {% if patient.Gender == 'Male' %}checked{% endif %}>
+        <label for="Female">Female</label>
+        <input type="radio" id="Female" name="Gender" value="Female" {% if patient.Gender == 'Female' %}checked{% endif %}></div><br>
+    
+        <div class="form-display">
+        <label for="blood_pressure">Blood Pressure:</label>
+        <select id="blood_pressure" name="Blood_Pressure">
+            <option value="">Select</option>
+            <option value="Normal" {% if patient.Blood_Pressure == 'Normal' %}selected{% endif %}>Normal</option>
+            <option value="High" {% if patient.Blood_Pressure == 'High' %}selected{% endif %}>High</option>
+            <option value="Low" {% if patient.Blood_Pressure == 'Low' %}selected{% endif %}>Low</option>
+        </select></div><br>
+    
+        <div class="form-display">
+        <label for="cholesterol_level">Chol Level:</label>
+        <select id="cholesterol_level" name="Cholesterol_Level" >
+            <option value="">Select</option>
+            <option value="Normal" {% if patient.Cholesterol_Level == 'Normal' %}selected{% endif %}>Normal</option>
+            <option value="High" {% if patient.Cholesterol_Level == 'High' %}selected{% endif %}>High</option>
+            <option value="Low" {% if patient.Cholesterol_Level == 'Low' %}selected{% endif %}>Low</option>
+        </select></div><br>
+    
+        <div class="form-display">
+        <label>Outcome Variable:</label>
+        <label for="positive_outcome">Positive</label>
+        <input type="radio" id="positive" name="Output_Variable" value="Positive" {% if patient.Outcome_Variable == 'Positive' %}checked{% endif %}>
+        <label for="negative_outcome">Negative</label>
+        <input type="radio" id="negative" name="Output_Variable" value="Negative" {% if patient.Outcome_Variable == 'Negative' %}checked{% endif %}></div>
+        <br>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" >Submit</button></div>
+</div>
+</div>
+</form>
+    
+</div>
+
+
+{% endblock %}
+

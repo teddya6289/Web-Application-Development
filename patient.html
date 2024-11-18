@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Patient Record Update</title>{% endblock %}
+
+{% block body %} 
+<h3> <div class="homebutton"><a href="{{url_for('default_display')}}">home</a></div>View Patient Record</h3>
+<form   method= "POST" action="{{url_for('ID')}}">
+<div class="word">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enter patient ID  
+    <div class="form-con">
+    <div class="form-display">
+        <label for="patient_ID">Patient ID:</label>
+        <input type="text" id="patient_ID" name="patient_ID"> 
+        <button type="submit">Proceed</button>
+    </div>
+</div>
+</div>
+</form>
+
+{% endblock %}

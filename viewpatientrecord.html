@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %} 
+
+{% endblock %}
+
+{% block body %}
+<h3><div class="homebutton"><a href="{{url_for('default_display')}}">home</a></div> Clinic and Care Patient records</h3>
+<div class="patientrecord">
+    <table>
+        <tr>
+        <th>Patient ID</th>
+        <th>Disease</th>
+        <th>Fever</th>
+        <th>Cough</th>
+        <th>Fatigue</th>
+        <th>Difficulty Breathing</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Blood Pressure</th>
+        <th>Cholesterol Level</th>
+        <th>Outcome Variable</th>
+        </tr>
+        {% for record in records %}
+                <tr>
+                    <td>{{record.patient_id}}</td>
+                    <td>{{record.Disease}}</td>
+                    <td>{{record.Fever}}</td>
+                    <td>{{record.Cough}}</td>
+                    <td>{{record.Fatigue}}</td>
+                    <td>{{record.Difficulty_Breath}}</td>
+                    <td>{{record.Age}}</td>
+                    <td>{{record.Gender}}</td>
+                    <td>{{record.Blood_Pressure}}</td>
+                    <td>{{record.Cholesterol_Level}}</td>
+                    <td>{{record.Outcome_Variable}}</td>
+                </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

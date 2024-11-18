@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title> Invalid Response</title>
+{% endblock %}
+
+{% block body %}
+<h1> <div class="homebutton"><a href="{{url_for('default_display')}}">home</a></div> Invalid Entry </h1>
+    <p> Warning: Patient Not Found.Please enter a valid input<form method= "POST" action="{{url_for('updatepage')}}">
+        <div class="form-con">
+        <div class="form-display">
+            <label for="patient_ID">Patient ID:</label>
+            <input type="text" id="patient_ID" name="patient_ID"> 
+            <button type="submit">Proceed</button>
+    </div>
+    </div>
+    </form></p>
+    
+{% endblock %}
